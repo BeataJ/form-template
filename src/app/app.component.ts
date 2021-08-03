@@ -10,5 +10,7 @@ export class AppComponent {
     const suggestedName = 'Superuser';
   }
 
-  onSubmit(){}
+  onSubmit(){
+    console.log('Submited!')
+  }
 }
