@@ -25,7 +25,9 @@
             name="email"
             required
             email
+            #email="ngModel"
             >
+            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
           </div>
         </div>
         <div class="form-group">
@@ -33,7 +35,7 @@
           <select 
           id="secret" 
           class="form-control"
-          ngModule
+          ngModel
           name="secret"
           >
             <option value="pet">Your first Pet?</option>
