@@ -42,6 +42,10 @@ export class AppComponent {
   // }
 
   onSubmit() {
-    console.log(this.signup)
+    this.user.username = this.signup.value.userData.username;
+    this.user.email = this.signup.value.userData.email;
+    this.user.secretQuestion = this.signup.value.secret;
+    this.user.answer = this.signup.value.questionAnswer;
+    this.user.gender = this.signup.value.gender;
   }
 }
