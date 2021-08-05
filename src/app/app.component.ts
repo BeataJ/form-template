@@ -17,7 +17,8 @@ export class AppComponent {
     secretQuestion: '',
     answer: '',
     gender: ''
-  }
+  };
+  submitted = false;
 
   suggestUserName() {
     const suggestedName = 'Superuser';
@@ -42,6 +43,7 @@ export class AppComponent {
   // }
 
   onSubmit() {
+    this.submitted = true;
     this.user.username = this.signup.value.userData.username;
     this.user.email = this.signup.value.userData.email;
     this.user.secretQuestion = this.signup.value.secret;
